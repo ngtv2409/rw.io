@@ -29,19 +29,15 @@ jobs:
 
       - name: Setup corpus
         run: |
-          python db_setup.py 
+          python db_setup.py
 
       - name: Make pages
         run: |
-          python pages.py 
+          python pages.py
 
-      - name: Push
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git checkout -B gh-pages
-          git add output
-          git commit -m "Nightly update $(date)"
-          git push --force origin gh-pages
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          publish_branch: gh-pages
