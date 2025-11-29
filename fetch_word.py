@@ -8,10 +8,10 @@ adj = list(wn.all_synsets(wn.ADJ))
 adv = list(wn.all_synsets(wn.ADV))
 
 posmap = {
-    wn.NOUN: noun,
-    wn.VERB: verb,
-    wn.ADJ: adj,
-    wn.ADV: adv
+    "noun": noun,
+    "verb": verb,
+    "adj": adj,
+    "adv": adv
 }
 
 def getWordRandom(pos, n = 1):
