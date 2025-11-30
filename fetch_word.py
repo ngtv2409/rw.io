@@ -15,15 +15,15 @@ def getWordRandom(n = 1):
         synsets = wn.synsets(lemma)
         if not synsets:
             continue
-        defi = [(
-            synset.pos(),
-            synset.definition(), 
-            synset.examples(),
-            [l.name() for l in synset.lemmas()]
-        ) for synset in synsets if synset is not None]
+        defi = [{
+            "pos": synset.pos(),
+            "content": synset.definition(), 
+            "examples": synset.examples(),
+            "syn": [l.name() for l in synset.lemmas()]
+        } for synset in synsets if synset is not None]
         i += 1
         ret.append(
-            (word, defi)
+            {"name": word, "defs": defi}
         )
         if i >= n:
             break
