@@ -5,12 +5,12 @@
 <title>Nightly Random Words</title>
 <link rel="stylesheet" href="style.css">
 </head>
+<body>
 <header>
     <div class="topbar">
         rw.io
     </div>
 </header>
-<body>
     This page is generated automatically nightly.<br/>
     The cron is requested at 17:30 UTC and can have slight delay due to high workloads.<br/>
     Last update: {{ timestr }}.<br/>
@@ -30,7 +30,6 @@
             {% endfor %}
         </div>
     {% endfor %}
-</body>
 <footer>
     <hr width="90%">
     <center>
@@ -39,4 +38,5 @@
         </a>
     </center>
 </footer>
+</body>
 </html>
