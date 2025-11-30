@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Nightly Random Words</title>
-<style>
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Random Words</h1>
@@ -14,11 +13,16 @@
 
     {% for word in words %}
         <div class="word-container">
-            {{ word.name }}<br/>
+            <div class="word-title">
+                {{ word.name }}
+            </div>
             {% for def in word.defs %}
-            ({{ def.pos }}) {{ def.content }}<br/>
-            eg: {{def.examples}}
-            synonyms: {{ def.syn }}
+            <hr id="def-sep">
+            <div class="word-def">
+                <strong>({{ def.pos }})</strong> {{ def.content }}<br/>
+            </div>
+            <strong>Eg:</strong> <em>{{def.examples}}</em><br/>
+            <strong>Synonyms:</strong> {{ def.syn }}
             {% endfor %}
         </div>
     {% endfor %}

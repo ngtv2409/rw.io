@@ -18,7 +18,7 @@ def getWordRandom(n = 1):
         defi = [{
             "pos": synset.pos(),
             "content": synset.definition(), 
-            "examples": synset.examples(),
+            "examples": synset.examples()[0] if synset.examples() else None,
             "syn": [l.name() for l in synset.lemmas()]
         } for synset in synsets if synset is not None]
         i += 1

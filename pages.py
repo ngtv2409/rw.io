@@ -10,7 +10,7 @@ from jinja2 import Environment, FileSystemLoader
 env = Environment(loader=FileSystemLoader('template'))
 
 outdir = "output"
-os.mkdir("output")
+os.makedirs(outdir, exist_ok=True)
 
 timestr = datetime.datetime.now().strftime("%m - %d - %Y | %H:%M UTC")
 
