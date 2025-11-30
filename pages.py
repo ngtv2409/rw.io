@@ -31,7 +31,8 @@ li {{ margin-bottom: 0.5rem; }}
 <body>
 <h1>Random Words</h1>
 This page is generated automatically nightly.<br/>
-Last update: {datetime.datetime.now().strftime("%m %d %y - %H %M")}.<br/>
+The cron is requested at 17:30 UTC, can have slight delay due to high workloads.<br/>
+Last update: {datetime.datetime.now().strftime("%m/%d/%y - %H:%M UTC")}.<br/>
 """
 
 html += "<ul>"
