@@ -12,7 +12,7 @@ env = Environment(loader=FileSystemLoader('template'))
 outdir = "output"
 os.makedirs(outdir, exist_ok=True)
 
-timestr = datetime.datetime.now().strftime("%m - %d - %Y | %H:%M UTC")
+timestr = datetime.datetime.now().strftime("%B %d %Y | %H:%M UTC")
 
 with open(os.path.join(outdir, "index.html"), "w", encoding="utf-8") as f:
     f.write(
