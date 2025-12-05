@@ -28,26 +28,36 @@ html, body {
 .word-container {
     margin: 2vh;
     padding: 1vh;
-    outline: 1px solid #2e5f9f;
-    background-color: #f8f9f2;
     color: #000000;
     border-radius: 10px;
     font-size: 1.75vh;
     line-height: 1.5;
 }
 
-.word-title {
-    margin:10px;
-    text-align: center;
-    font-size: 2vh;
-    font-weight: bold;
-    color: #2e5f9f;
+.word-def-box {
+    margin: 1vh;
+    padding: 1vh;
 }
 
-#def-sep {
-    background-color: #3ca6a6;
-    height: 1px;
-    border: none;
+.word-title {
+    font-family: fantasy;
+    text-align: center;
+    font-size: 5vh;
+    font-weight: bold;
+    color: #000;
+}
+
+.word-def {
+    display: flex;
+    align-items: center;
+    padding: 1vh;
+    gap: 2vh;
+    margin: 1vh;
+}
+
+.word-pos {
+    font-size: 3vh;
+    font-weight: bold;
 }
 
 .pagination-container {

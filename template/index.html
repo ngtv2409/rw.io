@@ -28,13 +28,20 @@
                 {{ word.name }}
             </div>
             {% for def in word.defs %}
-            <hr id="def-sep">
-            <div class="word-def">
-                <strong>({{ def.pos }})</strong> {{ def.content }}<br/>
+            <hr>
+            <div class="word-def-box">
+                <div class="word-def">
+                <div class="word-pos">
+                    ({{ def.pos }}) 
+                </div>
+                     {{ def.content }}<br/>
+                </div>
+                {% if def.examples is not none %}
+                    <strong>Example:</strong> <em>{{def.examples}}</em><br/>
+                {% endif %}
+                    <strong>Synonyms:</strong> {{ def.syn | join('; ')}}
             </div>
-            <strong>Eg:</strong> <em>{{def.examples}}</em><br/>
-            <strong>Synonyms:</strong> {{ def.syn }}
-            {% endfor %}
+            {% endfor %}             
         </div>
     {% endfor %}
 <footer>
