@@ -1,7 +1,6 @@
 html, body {
     height: 100%;
     width: 100%;
-    margin: 10px;
     padding: 0px;
     font-family: Arial, sans-serif;
     font-size: 1.5vh;
@@ -29,24 +28,64 @@ html, body {
 .word-container {
     margin: 2vh;
     padding: 1vh;
-    outline: 1px solid #2e5f9f;
-    background-color: #f8f9f2;
     color: #000000;
     border-radius: 10px;
     font-size: 1.75vh;
     line-height: 1.5;
 }
 
-.word-title {
-    margin:10px;
-    text-align: center;
-    font-size: 2vh;
-    font-weight: bold;
-    color: #2e5f9f;
+.word-def-box {
+    margin: 1vh;
+    padding: 1vh;
 }
 
-#def-sep {
-    background-color: #3ca6a6;
-    height: 1px;
+.word-title {
+    font-family: fantasy;
+    text-align: center;
+    font-size: 5vh;
+    font-weight: bold;
+    color: #000;
+}
+
+.word-def {
+    display: flex;
+    align-items: center;
+    padding: 1vh;
+    gap: 2vh;
+    margin: 1vh;
+}
+
+.word-pos {
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.pagination-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;   /* center the buttons */
+    gap: 3vh;                  /* space between buttons */
+    margin: 4vh 0 0 0;
+}
+
+.pagebtn {
+    width: 10%;
+    height: 10%;
+    font-size: 2.5vh;
+    font-weight: bold;
+    border-radius: 12px;
+    background-color: #efefef;
+    color: #5e5eaf;
     border: none;
+    transition: all 0.1s ease;
+}
+.pagebtn:active {
+    background-color: #dfdfdf;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+    margin: 10px auto;
+    min-width: 0;
 }
