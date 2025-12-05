@@ -67,6 +67,10 @@ html, body {
     background-color: #efefef;
     color: #5e5eaf;
     border: none;
+    transition: all 0.1s ease;
+}
+.pagebtn:active {
+    background-color: #dfdfdf;
 }
 
 progress {
